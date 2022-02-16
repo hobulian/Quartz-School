@@ -2,6 +2,7 @@
 	Copyright (C) 2006-2007 Nymbia
 	Copyright (C) 2010-2017 Hendrik "Nevcairiel" Leppkes < h.leppkes@gmail.com >
 	Copyright (C) 2014 ccfreak < ccfreak987+qzsch@gmail.com >
+	Copyright (C) 2022 호불-아즈샤라 < hobulian@gmail.com >
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -213,8 +214,12 @@ function School:UpdateCastBar(unit, spell)
 		return
 	end
 	local mod = barInfo[unit].module
-	if (mod.Bar.channeling and select(7,UnitChannelInfo(unit))) or select(8,UnitCastingInfo(unit)) then 
-		return
+	table.foreach(mod.db, print)
+	table.foreach(mod.Bar, print)
+	if mod.db.profile.noInterruptChangeColor then 
+		if (mod.Bar.channeling and select(7,UnitChannelInfo(unit))) or select(8,UnitCastingInfo(unit)) then 
+			return
+		end
 	end
 	if not spell then
 		if mod.Bar.channeling then
