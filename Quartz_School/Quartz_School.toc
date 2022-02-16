@@ -2,7 +2,7 @@
 ## Title: Quartz |cffffffffSchool|r
 ## Notes: Quartz module to change color after the spell school on cast bars.
 ## Author: Hobul
-## Version: 1.0.8
+## Version: 1.0.9
 ## Dependencies: Quartz
 ## X-License: GPL v3
 ## X-Quartz-Module: School
